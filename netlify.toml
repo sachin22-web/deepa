@@ -1,11 +1,12 @@
 [build]
   command = "npm run build"
   publish = "dist/spa"
-  functions = "dist/server"
 
 [functions]
-  external_node_modules = ["express"]
+  # ye tera actual source folder hai Netlify functions ka
+  directory = "netlify/functions"
   node_bundler = "esbuild"
+  external_node_modules = ["express"]
 
 [[redirects]]
   from = "/*"
