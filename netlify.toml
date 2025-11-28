@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist/spa"
+  functions = "dist/server"
+
+[functions]
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
